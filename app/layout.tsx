@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Footer, NavBar } from "@/components";
 import ToasterProvider from "@/providers/ToasterProvider";
+import { Providers } from "@/components/auth/Providers";
 
 export const metadata = {
   title: "CAR HUNTER",
@@ -15,10 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
-        <ToasterProvider />
-        <NavBar />
-        {children}
-        <Footer />
+        <Providers>
+          <ToasterProvider />
+          <NavBar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
