@@ -1,10 +1,15 @@
 "use client";
 import { CustomButton } from "@/components/index";
 import Image from "next/image";
-import { useCallback } from "react";
 
 const Hero = () => {
-  const handleScroll = useCallback(() => {});
+  const handleScroll = () => {
+    const nextSection = document.getElementById("discover");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="hero">
