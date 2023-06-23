@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Footer, NavBar } from "@/components";
+import ToasterProvider from "@/providers/ToasterProvider";
 
 export const metadata = {
   title: "CAR HUNTER",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
+        <ToasterProvider />
         <NavBar />
         {children}
         <Footer />
